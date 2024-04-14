@@ -5,8 +5,11 @@ import Link from "next/link";
 export default function Page() {
   return (
     <>
-      <form className="mx-auto mt-44 max-w-md rounded-lg border p-6">
-        <h1 className="mb-4 text-center text-2xl font-semibold">Register</h1>
+      <form className="mx-auto mt-44 max-w-lg rounded-lg  border-slate-700 p-6">
+        <h1 className="mb-8 text-center text-3xl font-semibold">
+          Register at{" "}
+          <span className="yellow-gradient text-4xl">Bully Buddy</span>
+        </h1>
 
         <div>
           <label htmlFor="name" className="mb-2 block">
@@ -16,7 +19,7 @@ export default function Page() {
           <Input
             type="text"
             name="name"
-            className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-md border border-slate-600 bg-transparent px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
             autoFocus
           />
@@ -30,7 +33,7 @@ export default function Page() {
           <Input
             type="email"
             name="email"
-            className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-md border border-slate-600 bg-transparent px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
         </div>
@@ -43,14 +46,14 @@ export default function Page() {
           <Input
             type="password"
             name="password"
-            className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-md border border-slate-600 bg-transparent px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
         </div>
 
         <Link
           href="/login"
-          className="mt-4 block rounded-md text-center text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="mt-4 block rounded-md text-center text-sm text-gray-400 underline hover:text-gray-600"
         >
           Already registered?
         </Link>

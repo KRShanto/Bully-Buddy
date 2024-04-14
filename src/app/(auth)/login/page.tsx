@@ -5,9 +5,11 @@ import Input from "@/components/Input";
 export default function Page() {
   return (
     <>
-      <form className="mx-auto mt-56 max-w-md rounded-md border p-6">
+      <form className="mx-auto mt-44 max-w-lg rounded-lg  border-slate-700 p-6">
         {/* Title */}
-        <h1 className="mb-4 text-center text-2xl font-semibold">Login</h1>
+        <h1 className="mb-8 text-center text-3xl font-semibold">
+          Login at <span className="yellow-gradient text-4xl">Bully Buddy</span>
+        </h1>
 
         {/* Email Address */}
         <div className="mb-4">
@@ -19,7 +21,7 @@ export default function Page() {
             type="email"
             required
             autoFocus
-            className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-md border border-slate-600 bg-transparent px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
@@ -32,13 +34,13 @@ export default function Page() {
             name="password"
             type="password"
             required
-            className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-md border border-slate-600 bg-transparent px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
         <Link
           href="/register"
-          className="mt-4 block rounded-md text-center text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="mt-4 block rounded-md text-center text-sm text-gray-400 underline hover:text-gray-600"
         >
           Don&rsquo;t have an account? Register
         </Link>
