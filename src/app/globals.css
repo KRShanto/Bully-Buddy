@@ -9,5 +9,38 @@
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: rgb(2, 7, 17);
+  /* background: url("/Background.png") no-repeat center center/cover; */
+  color: white;
+}
+
+.yellow-gradient {
+  background: linear-gradient(45deg, #f0e130, #f9571c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.start-btn {
+  background: linear-gradient(45deg, #0034f0, #00afdf);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transform: scale(1);
+  transition: transform 0.2s;
+  margin-top: 40px;
+  width: fit-content;
+}
+
+.start-btn:active {
+  transform: scale(0.9);
 }
