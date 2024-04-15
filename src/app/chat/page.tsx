@@ -29,14 +29,12 @@ export default async function Page() {
       </h2>
 
       <div className="mt-14 grid grid-cols-2 gap-6">
-        <SuggestionButton>I feel so lonely</SuggestionButton>
-        <SuggestionButton>Hey buddy, I need help</SuggestionButton>
-        <SuggestionButton>
-          What&apos;s the capital of Bangladesh?
-        </SuggestionButton>
-        <SuggestionButton>I need someone to talk to</SuggestionButton>
-        <SuggestionButton>What you know about AI?</SuggestionButton>
-        <SuggestionButton>I want to learn something new</SuggestionButton>
+        <SuggestionButton text="I feel so lonely" />
+        <SuggestionButton text="Hey buddy, I need help" />
+        <SuggestionButton text="What's the capital of Bangladesh?" />
+        <SuggestionButton text="I need someone to talk to" />
+        <SuggestionButton text="What you know about AI?" />
+        <SuggestionButton text="I want to learn something new" />
       </div>
 
       <ChatInput action={newChat} />
