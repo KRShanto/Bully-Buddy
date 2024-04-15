@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { auth } from "../auth";
+import Sidebar from "./Sidebar";
 
 export default async function Layout({
   children,
@@ -12,5 +13,10 @@ export default async function Layout({
     redirect("/login");
   }
 
-  return <div>{children}</div>;
+  return (
+    <div>
+      <Sidebar />
+      {children}
+    </div>
+  );
 }
