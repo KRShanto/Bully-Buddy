@@ -49,7 +49,12 @@ export async function newChat(formData: FormData) {
   });
 
   // Send the new chat message to OpenAI
-  const resText = (await openAISend(text)) as string;
+  const resText = (await openAISend([
+    {
+      role: "user",
+      content: text,
+    },
+  ])) as string;
 
   // Save these messages to the database
   await db.message.createMany({

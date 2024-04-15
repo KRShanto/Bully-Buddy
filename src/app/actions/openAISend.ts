@@ -3,12 +3,14 @@
 import OpenAI from "openai";
 import { auth } from "../auth";
 
-const messages: {
+let messages: {
   role: "user" | "assistant" | "system";
   content: string;
 }[] = [];
 
-export async function openAISend(text: string) {
+export async function openAISend(
+  newMessages: { role: "user" | "assistant"; content: string }[],
+) {
   const session = await auth();
 
   if (!session || !session.user) {
@@ -95,10 +97,7 @@ export async function openAISend(text: string) {
   });
 
   // add the user message to the messages array
-  messages.push({
-    role: "user",
-    content: text,
-  });
+  messages = messages.concat(newMessages);
 
   // send the messages to OpenAI
   const openai = new OpenAI({
