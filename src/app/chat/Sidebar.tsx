@@ -3,7 +3,7 @@ import Link from "next/link";
 import { db } from "@/lib/db";
 import { auth } from "../auth";
 import CreateRoomButton from "./CreateRoomButton";
-import RoomList from "./RoomList";
+import RoomName from "./RoomName";
 
 export default async function Sidebar() {
   const session = await auth();
@@ -19,7 +19,12 @@ export default async function Sidebar() {
 
       <div className="mt-5">
         <h3 className="font-bold uppercase text-slate-500">Previous Chats</h3>
-        <RoomList rooms={rooms} />
+        {/* <RoomList rooms={rooms} /> */}
+        <div className="mt-3 flex flex-col">
+          {rooms.map((room) => (
+            <RoomName room={room} key={room.id} />
+          ))}
+        </div>
       </div>
     </div>
   );
