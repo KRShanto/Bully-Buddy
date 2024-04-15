@@ -13,8 +13,8 @@ export default function ChatInput({
         className="w-[700px] rounded-md border border-slate-500 bg-transparent px-5 py-3 pr-20 text-xl text-slate-300 focus:border-slate-700 focus:outline-none"
         placeholder="Type your message here..."
         autoFocus
-        name="input"
-        id="input"
+        name="text"
+        id="text"
       />
       <button className="absolute right-3 text-3xl text-slate-300 hover:text-slate-500">
         <IoSend />

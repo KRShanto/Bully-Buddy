@@ -3,8 +3,8 @@ import { Iceberg } from "next/font/google";
 import { auth } from "../auth";
 import SuggestionButton from "./SuggestionButton";
 import { IoSend } from "react-icons/io5";
-import { helloworld } from "./helloworld";
 import ChatInput from "./ChatInput";
+import { newChat } from "../actions/newChat";
 
 const iceberg = Iceberg({
   subsets: ["latin"],
@@ -39,7 +39,7 @@ export default async function Page() {
         <SuggestionButton>I want to learn something new</SuggestionButton>
       </div>
 
-      <ChatInput action={helloworld} />
+      <ChatInput action={newChat} />
     </div>
   );
 }
