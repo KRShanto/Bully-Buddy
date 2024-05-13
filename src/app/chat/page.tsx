@@ -5,6 +5,7 @@ import SuggestionButton from "./SuggestionButton";
 import { IoSend } from "react-icons/io5";
 import { newChat } from "../actions/newChat";
 import Logo from "@/components/Logo";
+import SendButton from "./SendButton";
 
 const iceberg = Iceberg({
   subsets: ["latin"],
@@ -50,9 +51,10 @@ export default async function Page() {
           name="text"
           id="text"
         />
-        <button className="absolute right-3 text-3xl text-slate-300 hover:text-slate-500">
+        {/* <button className="absolute right-3 text-3xl text-slate-300 hover:text-slate-500">
           <IoSend />
-        </button>
+        </button> */}
+        <SendButton />
       </form>
     </div>
   );
