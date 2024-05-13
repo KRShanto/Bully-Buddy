@@ -14,12 +14,11 @@ export default async function Sidebar() {
   });
 
   return (
-    <div className="absolute h-screen border-r border-slate-800 bg-slate-950 p-10">
+    <div className="h-screen w-[350px] border-r border-slate-800 bg-slate-950 p-10">
       <CreateRoomButton />
 
       <div className="mt-5">
         <h3 className="font-bold uppercase text-slate-500">Previous Chats</h3>
-        {/* <RoomList rooms={rooms} /> */}
         <div className="mt-3 flex flex-col">
           {rooms.map((room) => (
             <RoomName room={room} key={room.id} />
