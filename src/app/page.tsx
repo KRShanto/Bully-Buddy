@@ -17,12 +17,12 @@ export default async function Page() {
   if (session && session.user) redirect("/chat");
 
   return (
-    <div className="flex h-screen flex-row items-center justify-between px-56">
+    <div className="flex h-screen flex-col items-center justify-between px-2 lg:flex-row lg:px-56">
       <div>
-        <h1 className="text-8xl">
+        <h1 className="text-2xl lg:text-8xl">
           <Logo width={150} />
         </h1>
-        <p className="mt-8 w-[500px] text-2xl text-gray-300">
+        <p className="mt-8 text-2xl text-gray-300">
           Best AI to start a conversation if you feel lonely or need someone to
           talk to.
         </p>
