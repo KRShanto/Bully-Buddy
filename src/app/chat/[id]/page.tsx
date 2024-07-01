@@ -5,6 +5,7 @@ import { notFound, redirect } from "next/navigation";
 import { User } from "@prisma/client";
 import Logo from "@/components/Logo";
 import { db } from "@/lib/db";
+import Link from "next/link";
 
 export default async function Page({ params }: { params: { id: string } }) {
   // Get the session
@@ -28,9 +29,9 @@ export default async function Page({ params }: { params: { id: string } }) {
   return (
     <div className="flex h-screen flex-col items-center p-5">
       {/* Header */}
-      <h1 className="text-4xl">
+      <Link className="text-4xl" href="/">
         <Logo />
-      </h1>
+      </Link>
 
       <div className="mt-2 h-[1px] w-[250px] bg-slate-500"></div>
 
