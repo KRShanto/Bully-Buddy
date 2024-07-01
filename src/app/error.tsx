@@ -2,9 +2,9 @@
 
 import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-import ErrorAnimation from "@/../public/404Animtion.json";
+import ErrorAnimation from "@/../public/Error.json";
 
-export default function NotFoundPage() {
+export default function ErrorPage() {
   return (
     <>
       <Lottie
@@ -14,9 +14,9 @@ export default function NotFoundPage() {
         autoplay={true}
       />
 
-      <h1 className="text-center text-8xl font-bold text-gray-300">404</h1>
+      <h1 className="text-center text-8xl font-bold text-gray-300">500</h1>
       <p className="text-center text-2xl text-gray-300">
-        The page you are looking for does not exist.
+        The server encountered an error
       </p>
     </>
   );

@@ -9,6 +9,7 @@ import { db } from "../lib/db";
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(db),
   secret: process.env.SECRET!,
+  trustHost: true,
   session: {
     strategy: "jwt",
   },
@@ -46,7 +47,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
           const isPasswordMatched = await bcrypt.compare(
             password,
-            user.password
+            user.password,
           );
 
           if (!isPasswordMatched) return null;
