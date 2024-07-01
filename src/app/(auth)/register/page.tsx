@@ -2,6 +2,11 @@ import Input from "@/components/Input";
 import SubmitButton from "./SubmitButton";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Register",
+  description: "Register to access your account.",
+};
+
 export default function Page() {
   return (
     <>

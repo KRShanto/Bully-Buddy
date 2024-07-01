@@ -2,6 +2,11 @@ import SubmitButton from "./SubmitButton";
 import Link from "next/link";
 import Input from "@/components/Input";
 
+export const metadata = {
+  title: "Login",
+  description: "Login to access your account.",
+};
+
 export default function Page() {
   return (
     <>

@@ -6,6 +6,12 @@ import { User } from "@prisma/client";
 import Logo from "@/components/Logo";
 import { db } from "@/lib/db";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Chat",
+  description: "Chat with our AI to start a conversation.",
+};
 
 export default async function Page({ params }: { params: { id: string } }) {
   // Get the session

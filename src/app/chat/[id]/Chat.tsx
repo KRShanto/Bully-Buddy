@@ -43,8 +43,6 @@ export default function Chat({
     setMessages((prev) => [...prev, { role: "USER", content: text }]);
     setText("");
 
-    console.log("text: ", text);
-
     const res = (await send({ text, roomId: room.id })) as string;
 
     setMessages((prev) => [...prev, { role: "ASSISTANT", content: res }]);

@@ -27,13 +27,9 @@ export async function send({ text, roomId }: { text: string; roomId: string }) {
     content: text,
   });
 
-  console.log(newMessages);
-
   // Send the messages to OpenAI
   // @ts-ignore
   const resText = (await openAISend(newMessages)) as string;
-
-  console.log(resText);
 
   // Save the new message to the database
   await db.message.createMany({

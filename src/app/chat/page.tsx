@@ -2,15 +2,20 @@ import React from "react";
 import { Iceberg } from "next/font/google";
 import { auth } from "../auth";
 import SuggestionButton from "./SuggestionButton";
-import { IoSend } from "react-icons/io5";
 import { newChat } from "../actions/newChat";
 import Logo from "@/components/Logo";
 import SendButton from "./SendButton";
+import { Metadata } from "next";
 
 const iceberg = Iceberg({
   subsets: ["latin"],
   weight: "400",
 });
+
+export const metadata: Metadata = {
+  title: "Chat",
+  description: "Chat with our AI to start a conversation.",
+};
 
 export default async function Page() {
   const session = await auth();

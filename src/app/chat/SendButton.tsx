@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+
 import { IoSend } from "react-icons/io5";
 import { ThreeDots } from "react-loader-spinner";
 import { newChat } from "../actions/newChat";

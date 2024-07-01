@@ -1,15 +1,16 @@
 import Link from "next/link";
 import Animation from "./Animation";
 import { auth } from "./auth";
-import { Iceberg } from "next/font/google";
 import { BsChatText } from "react-icons/bs";
 import { redirect } from "next/navigation";
 import Logo from "@/components/Logo";
+import { Metadata } from "next";
 
-const iceberg = Iceberg({
-  subsets: ["latin"],
-  weight: "400",
-});
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Best AI to start a conversation if you feel lonely or need someone to talk to.",
+};
 
 export default async function Page() {
   const session = await auth();
