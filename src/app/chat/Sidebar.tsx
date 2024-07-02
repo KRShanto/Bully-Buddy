@@ -1,8 +1,7 @@
 import React from "react";
 import { db } from "@/lib/db";
 import { auth } from "../auth";
-import CreateRoomButton from "./CreateRoomButton";
-import RoomName from "./RoomName";
+import SidebarClient from "./SidebarClient";
 
 export default async function Sidebar() {
   const session = await auth();
@@ -12,18 +11,5 @@ export default async function Sidebar() {
     where: { users: { some: { id: session?.user?.id } } },
   });
 
-  return (
-    <div className="h-screen w-[350px] border-r border-slate-800 bg-slate-950 p-10">
-      <CreateRoomButton />
-
-      <div className="mt-5">
-        <h3 className="font-bold uppercase text-slate-500">Previous Chats</h3>
-        <div className="mt-3 flex flex-col">
-          {rooms.map((room) => (
-            <RoomName room={room} key={room.id} />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+  return <SidebarClient rooms={rooms} />;
 }

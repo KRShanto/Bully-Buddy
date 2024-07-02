@@ -18,7 +18,7 @@ export default function CreateRoomButton() {
 
   return (
     <button
-      className="flex h-10 w-full items-center justify-center rounded-md bg-slate-800 text-white transition-colors duration-200 ease-in-out hover:bg-slate-700 active:scale-95"
+      className="mt-5 flex h-10 w-full items-center justify-center rounded-md bg-slate-800 text-white transition-colors duration-200 ease-in-out hover:bg-slate-700 active:scale-95"
       onClick={handler}
     >
       {loading ? (
