@@ -39,6 +39,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         <Logo />
       </Link>
 
+      {/* Line */}
       <div className="mt-2 h-[1px] w-[250px] bg-slate-500"></div>
 
       <Chat user={session.user as User} room={room} messages={messages} />

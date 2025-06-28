@@ -6,11 +6,7 @@ import { newChat } from "../actions/newChat";
 import Logo from "@/components/Logo";
 import SendButton from "./SendButton";
 import { Metadata } from "next";
-
-const iceberg = Iceberg({
-  subsets: ["latin"],
-  weight: "400",
-});
+import ChatPageHeader from "./ChatPageHeader";
 
 export const metadata: Metadata = {
   title: "Chat",
@@ -23,21 +19,16 @@ export default async function Page() {
   return (
     <div className="flex h-screen flex-col items-center justify-end py-10">
       {/* Header */}
-      <h1
-        className="flex items-center gap-4 text-5xl font-bold"
-        style={iceberg.style}
-      >
-        Welcome to <Logo width={70} />
-      </h1>
+      <ChatPageHeader />
 
       {/* Subheader */}
-      <h2 className="mt-5 text-xl font-semibold text-slate-300">
+      <h2 className="mt-5 text-xl font-semibold text-slate-300 max-[900px]:text-lg max-[600px]:text-base">
         Hey <span className="font-bold text-white">{session?.user?.name}</span>,
         what&apos;s on your mind today?
       </h2>
 
       {/* Suggestions */}
-      <div className="mt-14 grid grid-cols-2 gap-6">
+      <div className="mt-14 grid grid-cols-2 gap-6 max-[900px]:mt-7 max-[900px]:grid-cols-1 max-[600px]:gap-4">
         <SuggestionButton text="I feel so lonely" />
         <SuggestionButton text="Hey buddy, I need help" />
         <SuggestionButton text="What's the capital of Bangladesh?" />
@@ -50,7 +41,7 @@ export default async function Page() {
       <form className="relative mt-20 flex items-center" action={newChat}>
         <input
           type="text"
-          className="w-[700px] rounded-md border border-slate-500 bg-transparent px-5 py-3 pr-20 text-xl text-slate-300 focus:border-slate-700 focus:outline-none"
+          className="w-[700px] rounded-md border border-slate-500 bg-transparent px-5 py-3 pr-20 text-xl text-slate-300 focus:border-slate-700 focus:outline-none max-[900px]:w-[500px] max-[900px]:px-3 max-[900px]:text-lg max-[600px]:w-[300px] max-[600px]:text-base"
           placeholder="Type your message here..."
           autoFocus
           name="text"

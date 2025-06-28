@@ -16,7 +16,9 @@ export default async function Layout({
   return (
     <div className="flex">
       <Sidebar />
-      <div className="flex w-full justify-center">{children}</div>
+      <div className="flex w-full justify-center max-[1100px]:ml-14">
+        {children}
+      </div>
     </div>
   );
 }

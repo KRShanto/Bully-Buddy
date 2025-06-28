@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/cn";
 import { useEffect, useRef, useState } from "react";
-import { openAISend } from "../../actions/openAISend";
 import { Message, Room, User } from "@prisma/client";
 import Image from "next/image";
 import BotImage from "@/../public/Bot.png";
@@ -50,7 +49,7 @@ export default function Chat({
   }
 
   return (
-    <div className="h-full w-[800px] overflow-hidden">
+    <div className="h-full w-[800px] overflow-hidden max-[900px]:w-[90%]">
       <div className="h-[85%] overflow-scroll pb-5" ref={messageBox}>
         {messageList.map((message, index) => (
           <div key={index} className="mt-5">

@@ -101,11 +101,11 @@ export async function openAISend(
 
   // send the messages to OpenAI
   const openai = new OpenAI({
-    organization: process.env.OPENAI_API_ORG,
+    apiKey: process.env.OPENAI_API_KEY,
   });
 
   const res = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
+    model: "gpt-4o-mini",
     messages,
     temperature: 0.5,
   });

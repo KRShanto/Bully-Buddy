@@ -24,7 +24,7 @@ export default function SendButton() {
       {pending ? (
         <ThreeDots color="#d1d5db" height={30} width={30} />
       ) : (
-        <IoSend />
+        <IoSend className="max-[600px]:text-lg" />
       )}
     </button>
   );

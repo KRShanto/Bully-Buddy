@@ -8,7 +8,7 @@ export default function SuggestionButton({ text }: { text: string }) {
   return (
     <form
       action={newChat}
-      className="rounded-md border border-slate-700 text-lg text-slate-300 transition-colors hover:bg-slate-800 hover:text-white"
+      className="rounded-md border border-slate-700 text-lg text-slate-300 transition-colors hover:bg-slate-800 hover:text-white max-[900px]:text-base max-[600px]:text-sm"
     >
       <input type="hidden" name="text" value={text} />
       <SuggestionSubmitButton text={text} />
@@ -20,7 +20,7 @@ function SuggestionSubmitButton({ text }: { text: string }) {
   const { pending } = useFormStatus();
 
   return (
-    <button className="flex h-full w-full justify-center rounded-md px-5 py-3">
+    <button className="flex h-full w-full justify-center rounded-md px-5 py-3 max-[600px]:px-3 max-[600px]:py-2">
       {pending ? (
         <ThreeDots color="#d1d5db" height={30} width={30} />
       ) : (
